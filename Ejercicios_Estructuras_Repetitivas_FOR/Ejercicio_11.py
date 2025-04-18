@@ -11,5 +11,4 @@ for i in range(2, numero + 1):
         print(i)
         contador_primos += 1
 
-# Mostrar cuántos primos se encontraron
 print("Cantidad de números primos encontrados:", contador_primos)
