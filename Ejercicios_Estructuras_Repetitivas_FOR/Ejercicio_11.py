@@ -1,11 +1,15 @@
-ingreso = int(input("Ingrese un número:\n"))
-cantidad_primos = 0
+numero = int(input("Ingresá un número: "))
+contador_primos = 0
 
-print(f"Los números primos que se encuentran entre 1 y {ingreso} son:")
-for i in range(1, ingreso + 1):
-    for j in range()
-    if ingreso % i == 0:
-        if i == 1 or i == ingreso:
-            print(ingreso, end = "")
+for i in range(2, numero + 1):
+    es_primo = True
+    for j in range(2, i):
+        if i % j == 0:
+            es_primo = False
+            break
+    if es_primo:
+        print(i)
+        contador_primos += 1
 
-print(f"\nSe encontraron un total de {cantidad_primos} números primos.")
+# Mostrar cuántos primos se encontraron
+print("Cantidad de números primos encontrados:", contador_primos)
