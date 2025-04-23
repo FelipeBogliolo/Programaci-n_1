@@ -1,4 +1,4 @@
-from Ejercicios_Funciones.Ejercicio_4 import funcion_min_max
+from Ejercicio_4 import funcion_min_max
 
 def realizar_descuento(numero) -> int:
     descuento = (5 * numero) / 100
@@ -7,4 +7,4 @@ def realizar_descuento(numero) -> int:
 
 variable1 = funcion_min_max(10, 100)
 
-print(realizar_descuento(variable1))
+print(f"El resultado final con el descuento efectuado es {realizar_descuento(variable1)}")
