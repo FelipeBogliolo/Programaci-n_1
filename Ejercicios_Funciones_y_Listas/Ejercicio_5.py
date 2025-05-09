@@ -14,4 +14,5 @@ def busqueda_menor_edad(lista_edades: list) -> list:
     return indice
 
 indice = busqueda_menor_edad(edades)
-print((nombres[indice]))
+for i in indice:
+    print(f"{nombres[i]} - {edades[i]} años")
