@@ -7,8 +7,8 @@ matriz = [
 
 def tres_en_fila(matriz):
     for i in range(len(matriz)):
-        for j in range(len(matriz[0])):
-            if matriz[i][j] == matriz[i + 1][j] == matriz[i + 2][j]:
+        for j in range(len(matriz[i])):
+            if matriz[i][j] == matriz[i + 1][j] and matriz[i][j] == matriz[i + 2][j]:
                 return matriz[i][j]
     return None
             
