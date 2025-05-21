@@ -6,15 +6,24 @@ ventas = [
 ]
 
 #MENU
-def menu():
+def menu() -> int:
+    """
+    Muestra un menú de opciones al usuario para interactuar con el programa,
+    solicita una opción válida y la retorna.
+    El usuario debe ingresar un número entero entre 1 y 5. Si ingresa un valor
+    fuera de ese rango, se solicitará nuevamente hasta que sea válido.
+
+    Returns:
+        int: Opción seleccionada por el usuario, entre 1 y 5.
+    """
     print("\n--- MENÚ DE OPCIONES ---\n"
-    "1. Mostrar productos y ventas.\n"
-    "2. Ordenar productos por ventas anuales (desc).\n"
-    "3. Buscar producto por nombre y mostrar sus ventas.\n"
-    "4. Buscar producto por monto de venta.\n"
-    "5. Salir.\n")
+        "1. Mostrar productos y ventas.\n"
+        "2. Ordenar productos por ventas anuales (desc).\n"
+        "3. Buscar producto por nombre y mostrar sus ventas.\n"
+        "4. Buscar producto por monto de venta.\n"
+        "5. Salir.\n")
     ingreso = int(input("Ingrese una opción:\n"))
-    while ingreso < 0 and ingreso > 5:
+    while ingreso < 1 or ingreso > 5:
         print("ERROR. Ingrese un valor válido de 1 al 5.")
         ingreso = int(input("Ingrese una opción:\n"))
     return ingreso
@@ -22,13 +31,13 @@ def menu():
 
 
 #PUNTO 1
-def mostrar_ventas(productos, ventas) -> str:
+def mostrar_ventas(productos: list, ventas: list) -> str:
     """
     Muestra por consola una tabla de ventas organizada por producto y mes.
 
     Args:
         productos (list): Lista con nombres de los productos.
-        ventas (list of list): Matriz que contiene las ventas por producto y por mes.
+        ventas (list of lists): Matriz que contiene las ventas por producto y por mes.
     """
     print("Ventas trimestrales (en miles de $)")
     print("Producto | Tri 1 | Tri 2 | Tri 3 | Total")
