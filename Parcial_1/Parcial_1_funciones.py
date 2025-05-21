@@ -87,7 +87,7 @@ def ordenar_mayor_menor():
                 aux_producto = productos[i]
                 productos[i] = productos[j]
                 productos[j] = aux_producto
- 
+
 
 #PUNTO 4
 def busqueda_producto():
